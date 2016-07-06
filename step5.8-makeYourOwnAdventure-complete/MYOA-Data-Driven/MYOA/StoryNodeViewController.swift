@@ -30,32 +30,32 @@ class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableVie
         self.messageTextView.text = storyNode.message
         
         // Hide the restart button if there are choices to be made
-        restartButton.hidden = storyNode.promptCount() > 0
+        restartButton.isHidden = storyNode.promptCount() > 0
     }
     
         // MARK: - Table - Place Holder Implementation
     
-        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
             //Push the next story node.
-            let nextStoryNode = storyNode.storyNodeForIndex(indexPath.row)
-            let controller = self.storyboard!.instantiateViewControllerWithIdentifier("StoryNodeViewController") as! StoryNodeViewController
+            let nextStoryNode = storyNode.storyNodeForIndex((indexPath as NSIndexPath).row)
+            let controller = self.storyboard!.instantiateViewController(withIdentifier: "StoryNodeViewController") as! StoryNodeViewController
             controller.storyNode = nextStoryNode
             self.navigationController!.pushViewController(controller, animated: true)
     }
     
     
-        func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             
             // Return the number of prompts in the storyNode (The 2 is just a place holder)
             return storyNode.promptCount()
         }
     
-        func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             //Dequeue a cell and populate it with text from the correct prompt.
-            let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
-            cell.textLabel!.text = storyNode.promptForIndex(indexPath.row)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+            cell.textLabel!.text = storyNode.promptForIndex((indexPath as NSIndexPath).row)
             return cell
         }
 

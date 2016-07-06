@@ -14,7 +14,7 @@ struct RPSMatch {
     
     let p1: RPS
     let p2: RPS
-    let date: NSDate
+    let date: Date
     
     /**
     * if initialized without a date, use the current date
@@ -22,7 +22,7 @@ struct RPSMatch {
     init(p1: RPS,p2: RPS) {
         self.p1 = p1
         self.p2 = p2
-        self.date = NSDate()
+        self.date = Date()
     }
     
     var winner: RPS {

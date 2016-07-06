@@ -15,7 +15,7 @@ class VillainDetailViewController : UIViewController {
     
     var villain: Villain!
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.label.text = self.villain.name
   

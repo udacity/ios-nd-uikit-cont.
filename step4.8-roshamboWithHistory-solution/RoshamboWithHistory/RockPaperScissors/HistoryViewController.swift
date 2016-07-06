@@ -16,17 +16,17 @@ class HistoryViewController : UIViewController, UITableViewDelegate, UITableView
     var history: [RPSMatch]!
     
     // Table View Delegate
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return history.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let CellID = "HistoryCell"
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellID, forIndexPath: indexPath) 
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellID, for: indexPath) 
         
-        let match = self.history[indexPath.row]
+        let match = self.history[(indexPath as NSIndexPath).row]
         
         cell.textLabel!.text = victoryStatusDescription(match)
         cell.detailTextLabel!.text = "\(match.p1) vs. \(match.p2)"
@@ -35,7 +35,7 @@ class HistoryViewController : UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
-    func victoryStatusDescription(match: RPSMatch) -> String {
+    func victoryStatusDescription(_ match: RPSMatch) -> String {
         
         if (match.p1 == match.p2) {
             return "Tie."
@@ -45,8 +45,8 @@ class HistoryViewController : UIViewController, UITableViewDelegate, UITableView
             return "Loss."
         }
     }
-    @IBAction func dismissHistory(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func dismissHistory(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

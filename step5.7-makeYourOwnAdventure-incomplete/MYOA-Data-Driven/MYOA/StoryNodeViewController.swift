@@ -30,26 +30,26 @@ class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableVie
         self.messageTextView.text = storyNode.message
         
         // Hide the restart button if there are choices to be made
-        restartButton.hidden = storyNode.promptCount() > 0
+        restartButton.isHidden = storyNode.promptCount() > 0
     }
     
         // MARK: - Table - Place Holder Implementation
     
-        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             //TODO: Implement to push the next story node.
     
     }
     
     
-        func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             // TODO: Return the number of prompts in the storyNode (The 2 is just a place holder)
             return 2
         }
     
-        func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             //TODO: Dequeue a cell and populate it with text from the correct prompt.
             
-            let cell = tableView.dequeueReusableCellWithIdentifier("Cell")! 
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")! 
     
             cell.textLabel!.text = "Place holder prompt"
             

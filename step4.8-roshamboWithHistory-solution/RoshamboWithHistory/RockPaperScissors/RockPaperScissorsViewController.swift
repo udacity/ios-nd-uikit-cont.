@@ -16,24 +16,24 @@ class RockPaperScissorsViewController: UIViewController {
     
     var history = [RPSMatch]()
 
-    @IBAction func makeYourMove(sender: UIButton) {
+    @IBAction func makeYourMove(_ sender: UIButton) {
         
         switch (sender) {
         case self.rockButton:
-            throwDown(RPS.Rock)
+            throwDown(RPS.rock)
             
         case self.paperButton:
-            throwDown(RPS.Paper)
+            throwDown(RPS.paper)
 
         case self.scissorsButton:
-            throwDown(RPS.Scissors)
+            throwDown(RPS.scissors)
         
         default:
             assert(false, "An unknown button is invoking makeYourMove()")
         }
     }
     
-    func throwDown(playersMove: RPS)
+    func throwDown(_ playersMove: RPS)
     {
         let computersMove = RPS()
         let match = RPSMatch(p1: playersMove, p2: computersMove)
@@ -43,20 +43,20 @@ class RockPaperScissorsViewController: UIViewController {
         
         // Get the Storyboard and ResultViewController
         let storyboard = UIStoryboard (name: "Main", bundle: nil)
-        let resultVC = storyboard.instantiateViewControllerWithIdentifier("ResultViewController") as! ResultViewController
+        let resultVC = storyboard.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
         
         // Communicate the match to the ResultViewController
         resultVC.match = match
         
-        self.presentViewController(resultVC, animated: true, completion: nil)
+        self.present(resultVC, animated: true, completion: nil)
     }
-    @IBAction func showHistory(sender: AnyObject) {
+    @IBAction func showHistory(_ sender: AnyObject) {
         
         let storyboard = self.storyboard
-        let controller = storyboard?.instantiateViewControllerWithIdentifier("HistoryViewController")as! HistoryViewController
+        let controller = storyboard?.instantiateViewController(withIdentifier: "HistoryViewController")as! HistoryViewController
         
         controller.history = self.history
         
-        self.presentViewController(controller, animated: true, completion: nil)
+        self.present(controller, animated: true, completion: nil)
     }
 }

@@ -9,17 +9,17 @@
 import Foundation
 
 enum RPS: Comparable {
-    case Rock, Paper, Scissors
+    case rock, paper, scissors
 
     init() {
         switch arc4random() % 3 {
         
         case 0:
-            self = .Rock
+            self = .rock
         case 1:
-            self = .Paper
+            self = .paper
         default:
-            self = .Scissors
+            self = .scissors
         }
     }
 }
@@ -27,7 +27,7 @@ enum RPS: Comparable {
 func <(lhs: RPS, rhs: RPS) -> Bool {
     
     switch (lhs, rhs) {
-    case (.Rock, .Paper), (.Paper, .Scissors), (.Scissors, .Rock):
+    case (.rock, .paper), (.paper, .scissors), (.scissors, .rock):
         return true;
     default:
         return false;
@@ -39,11 +39,11 @@ extension RPS: CustomStringConvertible {
     var description: String {
         get {
             switch (self) {
-            case .Rock:
+            case .rock:
                 return "Rock"
-            case .Paper:
+            case .paper:
                 return "Paper"
-            case .Scissors:
+            case .scissors:
                 return "Scissors"
             }
         }

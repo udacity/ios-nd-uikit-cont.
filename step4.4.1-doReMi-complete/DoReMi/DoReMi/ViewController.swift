@@ -29,14 +29,14 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     // Add the two essential table data source methods here
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.model.count;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCellWithIdentifier(self.cellReuseIdentifier)!
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell =  tableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifier)!
         
-        let dictionary = self.model[indexPath.row]
+        let dictionary = self.model[(indexPath as NSIndexPath).row]
         
         cell.textLabel?.text = dictionary["text"]
         cell.detailTextLabel?.text = dictionary["detail"]

@@ -20,13 +20,13 @@ struct StoryNode {
     
     // The prompt string, these will be something like: "Open the door, and look inside"
     
-    func promptForIndex(index: Int) -> String {
+    func promptForIndex(_ index: Int) -> String {
         return connections[index].prompt
     }
     
     // The Story node that corresponds to the prompt with the same index.
     
-    func storyNodeForIndex(index: Int) -> StoryNode {
+    func storyNodeForIndex(_ index: Int) -> StoryNode {
         let storyNodeName = connections[index].connectToStoryNodeNamed
         let storyNode = adventure.storyNodes[storyNodeName]
         
@@ -44,7 +44,7 @@ struct StoryNode {
         message = dictionary["message"] as! String
         connections = [Connection]()
         
-        message = message.stringByReplacingOccurrencesOfString("\\n", withString: "\n\n")
+        message = message.replacingOccurrences(of: "\\n", with: "\n\n")
         
         if let connectionsArray = dictionary["connections"] as? [[String : String]] {
             for connectionDictionary: [String : String] in connectionsArray {

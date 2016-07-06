@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     * Number of Rows
     */
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
         return self.favoriteThings.count
     }
@@ -35,10 +35,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     * Cell For Row At Index Path
     */
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
-        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteThingCell")!
-        let favoriteThingForRow = self.favoriteThings[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteThingCell")!
+        let favoriteThingForRow = self.favoriteThings[(indexPath as NSIndexPath).row]
         cell.textLabel?.text = favoriteThingForRow
         
         return cell
