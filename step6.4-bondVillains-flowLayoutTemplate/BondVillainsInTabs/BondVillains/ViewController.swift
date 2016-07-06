@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
+    private func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
         
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "VillainDetailViewController") as! VillainDetailViewController
         detailController.villain = self.allVillains[(indexPath as NSIndexPath).row]

@@ -64,7 +64,7 @@ class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBAction func restartStory() {
         let controller = self.navigationController!.viewControllers[1] 
-        self.navigationController?.popToViewController(controller, animated: true)
+        let _ = self.navigationController?.popToViewController(controller, animated: true)
     }
     
 }
