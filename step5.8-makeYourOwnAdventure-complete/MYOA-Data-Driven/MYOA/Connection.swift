@@ -12,10 +12,10 @@ import Foundation
 struct Connection {
     
     var prompt: String
-    var connectToStoryNodeNamed: String
+    var connectedStoryNodeName: String
     
     init(dictionary: [String : String]) {
         prompt = dictionary["prompt"]!
-        connectToStoryNodeNamed = dictionary["connectTo"]!
+        connectedStoryNodeName = dictionary["connectTo"]!
     }
 }
