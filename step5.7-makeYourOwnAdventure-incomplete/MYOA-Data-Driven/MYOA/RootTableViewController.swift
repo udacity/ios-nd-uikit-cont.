@@ -19,7 +19,7 @@ class RootTableViewController: UITableViewController {
         super.viewDidLoad()
 
         // Initialize the Adventures
-        let adventurePlistPaths = Bundle.main().pathsForResources(ofType: "plist", inDirectory: nil) 
+        let adventurePlistPaths = Bundle.main.pathsForResources(ofType: "plist", inDirectory: nil) 
         
         for plistPath in adventurePlistPaths {
             

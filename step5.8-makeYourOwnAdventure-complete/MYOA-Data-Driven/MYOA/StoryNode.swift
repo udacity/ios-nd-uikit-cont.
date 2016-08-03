@@ -26,10 +26,9 @@ struct StoryNode {
     
     // The Story node that corresponds to the prompt with the same index.
     
-    func storyNodeForIndex(_ index: Int) -> StoryNode {
-        let storyNodeName = connections[index].connectToStoryNodeNamed
-        let storyNode = adventure.storyNodes[storyNodeName]
-        
+    func storyNodeForIndex(index: Int) -> StoryNode {
+        let storyNodeName = connections[index].connectedStoryNodeName
+        let storyNode = adventure.storyNodes[storyNodeName]        
         return storyNode!
     }
 
