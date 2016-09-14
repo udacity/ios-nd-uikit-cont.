@@ -22,8 +22,6 @@
 		4D673CA41A1BC5E200F01D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D673CA61A1BC5E200F01D25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4D673CA91A1BC5E200F01D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		4D673CB41A1BC5E200F01D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D673CB51A1BC5E200F01D25 /* FavoriteThingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteThingsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +39,6 @@
 			isa = PBXGroup;
 			children = (
 				4D673C9C1A1BC5E200F01D25 /* FavoriteThings */,
-				4D673CB21A1BC5E200F01D25 /* FavoriteThingsTests */,
 				4D673C9B1A1BC5E200F01D25 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,8 +57,8 @@
 				4D673C9F1A1BC5E200F01D25 /* AppDelegate.swift */,
 				4D673CA11A1BC5E200F01D25 /* ViewController.swift */,
 				4D673CA31A1BC5E200F01D25 /* Main.storyboard */,
-				4D673CA61A1BC5E200F01D25 /* Images.xcassets */,
 				4D673CA81A1BC5E200F01D25 /* LaunchScreen.xib */,
+				4D673CA61A1BC5E200F01D25 /* Images.xcassets */,
 				4D673C9D1A1BC5E200F01D25 /* Supporting Files */,
 			);
 			path = FavoriteThings;
@@ -71,23 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				4D673C9E1A1BC5E200F01D25 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4D673CB21A1BC5E200F01D25 /* FavoriteThingsTests */ = {
-			isa = PBXGroup;
-			children = (
-				4D673CB51A1BC5E200F01D25 /* FavoriteThingsTests.swift */,
-				4D673CB31A1BC5E200F01D25 /* Supporting Files */,
-			);
-			path = FavoriteThingsTests;
-			sourceTree = "<group>";
-		};
-		4D673CB31A1BC5E200F01D25 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4D673CB41A1BC5E200F01D25 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -283,7 +263,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.udacity.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -296,7 +276,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.udacity.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

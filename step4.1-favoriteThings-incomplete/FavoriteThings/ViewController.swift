@@ -8,22 +8,19 @@
 
 import UIKit
 
+// MARK: - ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-
-    // Model
+    // MARK: Model
     
-    let favoriteThings = [
+    let favoriteThings: [String] = [
         //TODO: Fill this array with your favorite things. Then use this collection to populate your table.
     ]
 
-    // Mark: Table View Data Source Methods
+    // MARK: Table View Data Source Methods
     
-    /**
-    * Number of Rows
-    */
-    
-    
+    // number of rows
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
         // TODO: Implement this method to get the correct row count
@@ -32,10 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     
-    /**
-    * Cell For Row At Index Path
-    */
-
+    // cell for row at index path
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       
       // TODO: Implement method

@@ -8,34 +8,30 @@
 
 import UIKit
 
+// MARK: - ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
-    // Model
+    // MARK: Model
     
-    let favoriteThings = [
+    let favoriteThings: [String] = [
         "Raindrops on roses",
         "Whiskers on kittens",
         "Bright copper kettles",
         "Warm woolen mittens"
     ]
 
-    // Mark: Table View Data Source Methods
+    // MARK: Table View Data Source Methods
     
-    /**
-    * Number of Rows
-    */
-    
+    // number of rows
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
         return self.favoriteThings.count
     }
 
     
-    /**
-    * Cell For Row At Index Path
-    */
-
+    // cell for row at index path
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       
       // TODO: Implement method
