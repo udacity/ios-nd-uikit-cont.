@@ -12,18 +12,7 @@
 		4D673CA51A1BC5E200F01D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D673CA31A1BC5E200F01D25 /* Main.storyboard */; };
 		4D673CA71A1BC5E200F01D25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D673CA61A1BC5E200F01D25 /* Images.xcassets */; };
 		4D673CAA1A1BC5E200F01D25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D673CA81A1BC5E200F01D25 /* LaunchScreen.xib */; };
-		4D673CB61A1BC5E200F01D25 /* FavoriteThingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D673CB51A1BC5E200F01D25 /* FavoriteThingsTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4D673CB01A1BC5E200F01D25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D673C921A1BC5E200F01D25 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4D673C991A1BC5E200F01D25;
-			remoteInfo = FavoriteThings;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4D673C9A1A1BC5E200F01D25 /* FavoriteThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,20 +22,12 @@
 		4D673CA41A1BC5E200F01D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D673CA61A1BC5E200F01D25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4D673CA91A1BC5E200F01D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		4D673CAF1A1BC5E200F01D25 /* FavoriteThingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FavoriteThingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D673CB41A1BC5E200F01D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D673CB51A1BC5E200F01D25 /* FavoriteThingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteThingsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4D673C971A1BC5E200F01D25 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4D673CAC1A1BC5E200F01D25 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -69,7 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				4D673C9A1A1BC5E200F01D25 /* FavoriteThings.app */,
-				4D673CAF1A1BC5E200F01D25 /* FavoriteThingsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,24 +112,6 @@
 			productReference = 4D673C9A1A1BC5E200F01D25 /* FavoriteThings.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4D673CAE1A1BC5E200F01D25 /* FavoriteThingsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4D673CBC1A1BC5E200F01D25 /* Build configuration list for PBXNativeTarget "FavoriteThingsTests" */;
-			buildPhases = (
-				4D673CAB1A1BC5E200F01D25 /* Sources */,
-				4D673CAC1A1BC5E200F01D25 /* Frameworks */,
-				4D673CAD1A1BC5E200F01D25 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4D673CB11A1BC5E200F01D25 /* PBXTargetDependency */,
-			);
-			name = FavoriteThingsTests;
-			productName = FavoriteThingsTests;
-			productReference = 4D673CAF1A1BC5E200F01D25 /* FavoriteThingsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -163,11 +125,6 @@
 					4D673C991A1BC5E200F01D25 = {
 						CreatedOnToolsVersion = 6.1;
 						LastSwiftMigration = 0800;
-					};
-					4D673CAE1A1BC5E200F01D25 = {
-						CreatedOnToolsVersion = 6.1;
-						LastSwiftMigration = 0800;
-						TestTargetID = 4D673C991A1BC5E200F01D25;
 					};
 				};
 			};
@@ -185,7 +142,6 @@
 			projectRoot = "";
 			targets = (
 				4D673C991A1BC5E200F01D25 /* FavoriteThings */,
-				4D673CAE1A1BC5E200F01D25 /* FavoriteThingsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -201,13 +157,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D673CAD1A1BC5E200F01D25 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -220,23 +169,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D673CAB1A1BC5E200F01D25 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4D673CB61A1BC5E200F01D25 /* FavoriteThingsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4D673CB11A1BC5E200F01D25 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4D673C991A1BC5E200F01D25 /* FavoriteThings */;
-			targetProxy = 4D673CB01A1BC5E200F01D25 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4D673CA31A1BC5E200F01D25 /* Main.storyboard */ = {
@@ -271,8 +204,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -315,8 +250,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -363,45 +300,6 @@
 			};
 			name = Release;
 		};
-		4D673CBD1A1BC5E200F01D25 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = FavoriteThingsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.udacity.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FavoriteThings.app/FavoriteThings";
-			};
-			name = Debug;
-		};
-		4D673CBE1A1BC5E200F01D25 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = FavoriteThingsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.udacity.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FavoriteThings.app/FavoriteThings";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -419,15 +317,6 @@
 			buildConfigurations = (
 				4D673CBA1A1BC5E200F01D25 /* Debug */,
 				4D673CBB1A1BC5E200F01D25 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4D673CBC1A1BC5E200F01D25 /* Build configuration list for PBXNativeTarget "FavoriteThingsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4D673CBD1A1BC5E200F01D25 /* Debug */,
-				4D673CBE1A1BC5E200F01D25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
