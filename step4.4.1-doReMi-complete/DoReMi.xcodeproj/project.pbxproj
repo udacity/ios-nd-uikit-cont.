@@ -12,18 +12,7 @@
 		4D673CD31A1C11BF00F01D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D673CD11A1C11BF00F01D25 /* Main.storyboard */; };
 		4D673CD51A1C11BF00F01D25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D673CD41A1C11BF00F01D25 /* Images.xcassets */; };
 		4D673CD81A1C11BF00F01D25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D673CD61A1C11BF00F01D25 /* LaunchScreen.xib */; };
-		4D673CE41A1C11BF00F01D25 /* DoReMiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D673CE31A1C11BF00F01D25 /* DoReMiTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4D673CDE1A1C11BF00F01D25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D673CC01A1C11BF00F01D25 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4D673CC71A1C11BF00F01D25;
-			remoteInfo = DoReMi;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4D673CC81A1C11BF00F01D25 /* DoReMi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoReMi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,20 +22,10 @@
 		4D673CD21A1C11BF00F01D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D673CD41A1C11BF00F01D25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4D673CD71A1C11BF00F01D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		4D673CDD1A1C11BF00F01D25 /* DoReMiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoReMiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D673CE21A1C11BF00F01D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D673CE31A1C11BF00F01D25 /* DoReMiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoReMiTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4D673CC51A1C11BF00F01D25 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4D673CDA1A1C11BF00F01D25 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,7 +39,6 @@
 			isa = PBXGroup;
 			children = (
 				4D673CCA1A1C11BF00F01D25 /* DoReMi */,
-				4D673CE01A1C11BF00F01D25 /* DoReMiTests */,
 				4D673CC91A1C11BF00F01D25 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				4D673CC81A1C11BF00F01D25 /* DoReMi.app */,
-				4D673CDD1A1C11BF00F01D25 /* DoReMiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,8 +57,8 @@
 				4D673CCD1A1C11BF00F01D25 /* AppDelegate.swift */,
 				4D673CCF1A1C11BF00F01D25 /* ViewController.swift */,
 				4D673CD11A1C11BF00F01D25 /* Main.storyboard */,
-				4D673CD41A1C11BF00F01D25 /* Images.xcassets */,
 				4D673CD61A1C11BF00F01D25 /* LaunchScreen.xib */,
+				4D673CD41A1C11BF00F01D25 /* Images.xcassets */,
 				4D673CCB1A1C11BF00F01D25 /* Supporting Files */,
 			);
 			path = DoReMi;
@@ -91,23 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				4D673CCC1A1C11BF00F01D25 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4D673CE01A1C11BF00F01D25 /* DoReMiTests */ = {
-			isa = PBXGroup;
-			children = (
-				4D673CE31A1C11BF00F01D25 /* DoReMiTests.swift */,
-				4D673CE11A1C11BF00F01D25 /* Supporting Files */,
-			);
-			path = DoReMiTests;
-			sourceTree = "<group>";
-		};
-		4D673CE11A1C11BF00F01D25 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4D673CE21A1C11BF00F01D25 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -132,24 +92,6 @@
 			productReference = 4D673CC81A1C11BF00F01D25 /* DoReMi.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4D673CDC1A1C11BF00F01D25 /* DoReMiTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4D673CEA1A1C11BF00F01D25 /* Build configuration list for PBXNativeTarget "DoReMiTests" */;
-			buildPhases = (
-				4D673CD91A1C11BF00F01D25 /* Sources */,
-				4D673CDA1A1C11BF00F01D25 /* Frameworks */,
-				4D673CDB1A1C11BF00F01D25 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4D673CDF1A1C11BF00F01D25 /* PBXTargetDependency */,
-			);
-			name = DoReMiTests;
-			productName = DoReMiTests;
-			productReference = 4D673CDD1A1C11BF00F01D25 /* DoReMiTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -163,11 +105,6 @@
 					4D673CC71A1C11BF00F01D25 = {
 						CreatedOnToolsVersion = 6.1;
 						LastSwiftMigration = 0800;
-					};
-					4D673CDC1A1C11BF00F01D25 = {
-						CreatedOnToolsVersion = 6.1;
-						LastSwiftMigration = 0800;
-						TestTargetID = 4D673CC71A1C11BF00F01D25;
 					};
 				};
 			};
@@ -185,7 +122,6 @@
 			projectRoot = "";
 			targets = (
 				4D673CC71A1C11BF00F01D25 /* DoReMi */,
-				4D673CDC1A1C11BF00F01D25 /* DoReMiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -201,13 +137,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D673CDB1A1C11BF00F01D25 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -220,23 +149,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D673CD91A1C11BF00F01D25 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4D673CE41A1C11BF00F01D25 /* DoReMiTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4D673CDF1A1C11BF00F01D25 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4D673CC71A1C11BF00F01D25 /* DoReMi */;
-			targetProxy = 4D673CDE1A1C11BF00F01D25 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4D673CD11A1C11BF00F01D25 /* Main.storyboard */ = {
@@ -363,45 +276,6 @@
 			};
 			name = Release;
 		};
-		4D673CEB1A1C11BF00F01D25 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DoReMiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.udacity.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoReMi.app/DoReMi";
-			};
-			name = Debug;
-		};
-		4D673CEC1A1C11BF00F01D25 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DoReMiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.udacity.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoReMi.app/DoReMi";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -419,15 +293,6 @@
 			buildConfigurations = (
 				4D673CE81A1C11BF00F01D25 /* Debug */,
 				4D673CE91A1C11BF00F01D25 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4D673CEA1A1C11BF00F01D25 /* Build configuration list for PBXNativeTarget "DoReMiTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4D673CEB1A1C11BF00F01D25 /* Debug */,
-				4D673CEC1A1C11BF00F01D25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -8,9 +8,12 @@
 
 import UIKit
 
+// MARK: - ViewController: UIViewController, UITableViewDataSource
 
 class ViewController: UIViewController, UITableViewDataSource {
-
+    
+    // MARK: Properties
+    
     // Use this string property as your reuse identifier, 
     // Storyboard has been set up for you using this String.
     let cellReuseIdentifier = "MyCellReuseIdentifier"
@@ -26,6 +29,8 @@ class ViewController: UIViewController, UITableViewDataSource {
         ["text" : "La", "detail" : "A note to follow So."],
         ["text" : "Ti", "detail" : "A drink with jam and bread."]
     ]
+    
+    // MARK: UITableViewDataSource
     
     // Add the two essential table data source methods here
     
@@ -43,6 +48,4 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
-
 }
-
