@@ -8,12 +8,21 @@
 
 import UIKit
 
+// MARK: - RockPaperScissorsViewController: UIViewController
+
 class RockPaperScissorsViewController: UIViewController {
 
+    // MARK: Properties
+    
+    var match: RPSMatch!
+    
+    // MARK: Outlets
+    
     @IBOutlet weak var rockButton: UIButton!
     @IBOutlet weak var paperButton: UIButton!
     @IBOutlet weak var scissorsButton: UIButton!
-    var match: RPSMatch!
+    
+    // MARK: Segue
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -22,6 +31,8 @@ class RockPaperScissorsViewController: UIViewController {
         controller.match = self.match
     }
 
+    // MARK: Actions
+    
     @IBAction func makeYourMove(sender: UIButton) {
         
         switch (sender) {
@@ -39,8 +50,9 @@ class RockPaperScissorsViewController: UIViewController {
         }
     }
     
-    func throwDown(playersMove: RPS)
-    {
+    // MARK: Play!
+    
+    func throwDown(playersMove: RPS) {
         let computersMove = RPS()
         self.match = RPSMatch(playersMove, computersMove)
         
@@ -65,5 +77,4 @@ class RockPaperScissorsViewController: UIViewController {
         // 3rd Way: Segue Only, No code!
         // But don't forget to implement prepareForSegue.
     }
-
 }

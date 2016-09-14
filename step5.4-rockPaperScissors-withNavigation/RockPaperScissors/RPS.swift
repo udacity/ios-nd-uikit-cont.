@@ -8,12 +8,13 @@
 
 import Foundation
 
+// MARK: - RPS: Comparable
+
 enum RPS: Comparable {
     case Rock, Paper, Scissors
-
+    
     init() {
         switch arc4random() % 3 {
-        
         case 0:
             self = .Rock
         case 1:
@@ -24,15 +25,19 @@ enum RPS: Comparable {
     }
 }
 
+// MARK: - RPS (Comparison)
+
 func <(lhs: RPS, rhs: RPS) -> Bool {
     
     switch (lhs, rhs) {
     case (.Rock, .Paper), (.Paper, .Scissors), (.Scissors, .Rock):
-        return true;
+        return true
     default:
-        return false;
+        return false
     }
 }
+
+// MARK: - RPS: CustomStringConvertible
 
 extension RPS: CustomStringConvertible {
     
@@ -49,4 +54,3 @@ extension RPS: CustomStringConvertible {
         }
     }
 }
-
