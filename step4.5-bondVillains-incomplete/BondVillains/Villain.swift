@@ -9,8 +9,12 @@
 import Foundation
 import UIKit
 
+// MARK: - Villain
+
 struct Villain {
 
+    // MARK: Properties
+    
     let name: String
     let evilScheme: String
     let imageName: String
@@ -19,6 +23,8 @@ struct Villain {
     static let EvilSchemeKey = "EvilScheme"
     static let ImageNameKey = "ImageNameKey"
 
+    // MARK: Initializer
+    
     // Generate a Villain from a three entry dictionary
 
     init(dictionary: [String : String]) {
@@ -27,6 +33,8 @@ struct Villain {
         self.imageName = dictionary[Villain.ImageNameKey]!
     }
 }
+
+// MARK: - Villian (All Villians)
 
 /**
 * This extension adds static variable allVillains. An array of Villain objects

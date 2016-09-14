@@ -8,8 +8,12 @@
 
 import UIKit
 
+// MARK: - ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    // MARK: Properties
+    
     // Get ahold of some villains, for the table
     // This is an array of Villain instances
     let allVillains = Villain.allVillains
@@ -39,5 +43,4 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
-
 }
