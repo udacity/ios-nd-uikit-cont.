@@ -8,9 +8,12 @@
 
 import UIKit
 
+// MARK: - ViewController: UIViewController, UITableViewDataSource
 
 class ViewController: UIViewController, UITableViewDataSource {
 
+    // MARK: Properties
+    
     // Use this string property as your reuse identifier, 
     // Storyboard has been set up for you using this String.
     let cellReuseIdentifier = "MyCellReuseIdentifier"
@@ -25,11 +28,13 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //TODO: Implement method to return the correct number of rows.
+        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //TODO: Implement method to return cell with the correct reuseidentifier and populated with the correct data.
+        let placeholderCell = UITableViewCell()
+        return placeholderCell
     }
-
 }
 
