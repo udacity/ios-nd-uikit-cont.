@@ -8,6 +8,8 @@
 
 import Foundation
 
+// MARK: - RPS
+
 // The RPS enum represents a move.
 
 enum RPS {
@@ -37,6 +39,8 @@ enum RPS {
     }
 }
 
+// MARK: - RPS: CustomStringConvertible
+
 extension RPS: CustomStringConvertible {
     
     var description: String {
@@ -52,4 +56,3 @@ extension RPS: CustomStringConvertible {
         }
     }
 }
-

@@ -9,13 +9,20 @@
 import Foundation
 import UIKit
 
+// MARK: - HistoryViewController : UIViewController, UITableViewDelegate, UITableViewDataSource 
+
 class HistoryViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var tableView: UITableView!
+    // MARK: Properties
     
     var history: [RPSMatch]!
     
-    // Table View Delegate
+    // MARK: Outlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: Table View Delegate
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return history.count
     }
@@ -35,6 +42,8 @@ class HistoryViewController : UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    // MARK: Victory Status
+    
     func victoryStatusDescription(match: RPSMatch) -> String {
         
         if (match.p1 == match.p2) {
@@ -45,6 +54,9 @@ class HistoryViewController : UIViewController, UITableViewDelegate, UITableView
             return "Loss."
         }
     }
+    
+    // MARK: Actions
+    
     @IBAction func dismissHistory(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }

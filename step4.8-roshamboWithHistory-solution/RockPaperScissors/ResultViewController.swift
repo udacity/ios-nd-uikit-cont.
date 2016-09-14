@@ -8,27 +8,31 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
+// MARK: - ResultViewController: UIViewController
 
-    @IBOutlet weak var resultImageView: UIImageView!
-    @IBOutlet weak var messageLabel: UILabel!
+class ResultViewController: UIViewController {
+    
+    // MARK: Properties
     
     var match: RPSMatch!
-    
     var message: NSString!
-    var  picture: UIImage!
+    var picture: UIImage!
     
+    // MARK: Outlets
+    
+    @IBOutlet weak var resultImageView: UIImageView!
+    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var playAgainButton: UIButton!
     
-    override func viewWillAppear(animated:Bool)
-    {
+    // MARK: Life Cycle
+    
+    override func viewWillAppear(animated:Bool) {
         super.viewWillAppear(animated)
         self.messageLabel.text = messageForMatch(match)
         self.resultImageView.image = imageForMatch(match)
     }
 
-    override func viewDidAppear(animated: Bool)
-    {
+    override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
         UIView.animateWithDuration(1.5)
@@ -37,10 +41,13 @@ class ResultViewController: UIViewController {
         }
     }
     
-    @IBAction func playAgainButtonPressed(sender: AnyObject)
-    {
+    // MARK: Actions
+    
+    @IBAction func playAgainButtonPressed(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    // MARK: Messages for Match
     
     func messageForMatch(match: RPSMatch) -> String {
         
@@ -55,8 +62,7 @@ class ResultViewController: UIViewController {
     func resultString(match: RPSMatch) -> String {
         return match.p1.defeats(match.p2) ? "You Win!" : "You Lose!"
     }
-    
-    
+        
     func victoryModeString(gesture: RPS) -> String {
         switch (gesture) {
         case .Rock:
@@ -67,6 +73,8 @@ class ResultViewController: UIViewController {
             return "covers"
         }
     }
+    
+    // MARK: Image for Match
     
     func imageForMatch(match: RPSMatch) -> UIImage {
         

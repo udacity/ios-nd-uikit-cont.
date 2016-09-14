@@ -8,13 +8,21 @@
 
 import UIKit
 
-class RockPaperScissorsViewController: UIViewController {
+// MARK: - RockPaperScissorsViewController: UIViewController
 
+class RockPaperScissorsViewController: UIViewController {
+    
+    // MARK: Properties
+    
+    var history = [RPSMatch]()
+    
+    // MARK: Outlets
+    
     @IBOutlet weak var rockButton: UIButton!
     @IBOutlet weak var paperButton: UIButton!
     @IBOutlet weak var scissorsButton: UIButton!
     
-    var history = [RPSMatch]()
+    // MARK: Actions
 
     @IBAction func makeYourMove(sender: UIButton) {
         
@@ -33,8 +41,19 @@ class RockPaperScissorsViewController: UIViewController {
         }
     }
     
-    func throwDown(playersMove: RPS)
-    {
+    @IBAction func showHistory(sender: AnyObject) {
+        
+        let storyboard = self.storyboard
+        let controller = storyboard?.instantiateViewControllerWithIdentifier("HistoryViewController")as! HistoryViewController
+        
+        controller.history = self.history
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    // MARK: Play!
+    
+    func throwDown(playersMove: RPS) {
         let computersMove = RPS()
         let match = RPSMatch(p1: playersMove, p2: computersMove)
         
@@ -49,14 +68,5 @@ class RockPaperScissorsViewController: UIViewController {
         resultVC.match = match
         
         self.presentViewController(resultVC, animated: true, completion: nil)
-    }
-    @IBAction func showHistory(sender: AnyObject) {
-        
-        let storyboard = self.storyboard
-        let controller = storyboard?.instantiateViewControllerWithIdentifier("HistoryViewController")as! HistoryViewController
-        
-        controller.history = self.history
-        
-        self.presentViewController(controller, animated: true, completion: nil)
     }
 }

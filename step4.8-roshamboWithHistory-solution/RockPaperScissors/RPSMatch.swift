@@ -8,13 +8,19 @@
 
 import Foundation
 
-// The RPSMatch struct represents a single match. You'll learn more about structs in Lesson 5's Swift session! 
+// MARK: - RPSMatch
 
+// The RPSMatch struct stores the results of a match.
+// Now we're ready to store multiple matches in an array, so users can track their match history.
 struct RPSMatch {
+    
+    // MARK: Properties
     
     let p1: RPS
     let p2: RPS
     let date: NSDate
+    
+    // MARK: Initializer
     
     /**
     * if initialized without a date, use the current date
@@ -24,6 +30,8 @@ struct RPSMatch {
         self.p2 = p2
         self.date = NSDate()
     }
+    
+    // MARK: Computed Properties
     
     var winner: RPS {
         get {
