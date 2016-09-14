@@ -8,15 +8,23 @@
 
 import UIKit
 
+// MARK: - StoryNodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+
 class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // MARK: Properties
+    
     var storyNode: StoryNode!
+
+    // MARK: Outlets
     
     @IBOutlet weak var adventureImageView: UIImageView!
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var restartButton: UIButton!
-        
+    
+    // MARK: Life Cycle
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -33,35 +41,31 @@ class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableVie
         restartButton.hidden = storyNode.promptCount() > 0
     }
     
-        // MARK: - Table - Place Holder Implementation
+    // MARK: Table Placeholder Implementation
     
-        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-            //TODO: Implement to push the next story node.
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //TODO: Implement to push the next story node.
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // TODO: Return the number of prompts in the storyNode (The 2 is just a place holder)
+        return 2
+    }
     
-        func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            // TODO: Return the number of prompts in the storyNode (The 2 is just a place holder)
-            return 2
-        }
-    
-        func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            //TODO: Dequeue a cell and populate it with text from the correct prompt.
-            
-            let cell = tableView.dequeueReusableCellWithIdentifier("Cell")! 
-    
-            cell.textLabel!.text = "Place holder prompt"
-            
-            return cell
-        }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        //TODO: Dequeue a cell and populate it with text from the correct prompt.
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")! 
 
+        cell.textLabel!.text = "Place holder prompt"
+        
+        return cell
+    }
     
-    // MARK: - Actions
+    // MARK: Actions
     
     @IBAction func restartStory() {
         let controller = self.navigationController!.viewControllers[1] 
         self.navigationController?.popToViewController(controller, animated: true)
     }
-    
 }

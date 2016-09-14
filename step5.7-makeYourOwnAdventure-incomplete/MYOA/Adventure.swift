@@ -7,12 +7,17 @@
 
 import Foundation
 
+// MARK: - Adventure
+
 class Adventure {
+
+    // MARK: Properties
     
-    var credits: Credits;
+    var credits: Credits
     var startNode: StoryNode!
-    
     var storyNodes: [String : StoryNode]
+    
+    // MARK: Initializer
     
     init(dictionary: [String : AnyObject]) {
         

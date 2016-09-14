@@ -7,11 +7,39 @@
 
 import Foundation
 
+// MARK: - StoryNode
+
 struct StoryNode {
     
-    // Public Message Property
+    // MARK: Properites
+    
     var message: String
-
+    private var adventure: Adventure
+    private var connections: [Connection]
+    var imageName: String? {
+        return adventure.credits.imageName
+    }
+    
+    // MARK: Initializer
+    
+    init(dictionary: [String : AnyObject], adventure: Adventure) {
+        
+        self.adventure = adventure
+        
+        message = dictionary["message"] as! String
+        connections = [Connection]()
+        
+        message = message.stringByReplacingOccurrencesOfString("\\n", withString: "\n\n")
+        
+        if let connectionsArray = dictionary["connections"] as? [[String : String]] {
+            for connectionDictionary: [String : String] in connectionsArray {
+                connections.append(Connection(dictionary: connectionDictionary))
+            }
+        }
+    }
+    
+    // MARK: Prompts
+    
     // The number of prompts for story choices
     
     func promptCount() -> Int {
@@ -32,29 +60,4 @@ struct StoryNode {
         
         return storyNode!
     }
-
-    
-    private var adventure: Adventure
-    private var connections: [Connection]
-    
-    init(dictionary: [String : AnyObject], adventure: Adventure) {
-        
-        self.adventure = adventure
-        
-        message = dictionary["message"] as! String
-        connections = [Connection]()
-        
-        message = message.stringByReplacingOccurrencesOfString("\\n", withString: "\n\n")
-        
-        if let connectionsArray = dictionary["connections"] as? [[String : String]] {
-            for connectionDictionary: [String : String] in connectionsArray {
-                connections.append(Connection(dictionary: connectionDictionary))
-            }
-        }
-    }
-    
-    var imageName: String? {
-        return adventure.credits.imageName
-    }
-    
 }

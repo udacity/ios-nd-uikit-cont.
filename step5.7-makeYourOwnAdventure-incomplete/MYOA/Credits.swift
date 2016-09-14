@@ -7,13 +7,19 @@
 
 import Foundation
 
+// MARK: - Credits
+
 struct Credits {
+
+    // MARK: Properties
     
     var key: String?
     var title: String?
     var author: String?
     var source: String?
     var imageName: String?
+    
+    // MARK: Initializer
     
     init(dictionary: [String : String]) {
         key = dictionary["key"] as String?

@@ -8,11 +8,15 @@
 
 import UIKit
 
+// MARK: - RootTableViewController: UITableViewController
+
 class RootTableViewController: UITableViewController {
+
+    // MARK: Properties
     
     var adventures = [Adventure]()
     
-    // MARK: - UIViewController
+    // MARK: Life Cycle
     
     override func viewDidLoad() {
         
@@ -36,7 +40,7 @@ class RootTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
 
-    // MARK: - UITableViewController
+    // MARK: UITableViewController
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return adventures.count
@@ -71,6 +75,4 @@ class RootTableViewController: UITableViewController {
         // Push the new controller onto the stack
         self.navigationController!.pushViewController(storyNodeController, animated: true)
     }
-    
 }
-
