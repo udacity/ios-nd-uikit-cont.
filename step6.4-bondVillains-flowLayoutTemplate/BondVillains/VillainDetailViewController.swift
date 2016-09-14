@@ -8,12 +8,20 @@
 
 import UIKit
 
-class VillainDetailViewController : UIViewController {
+// MARK: - VillainDetailViewController: UIViewController
+
+class VillainDetailViewController: UIViewController {
+    
+    // MARK: Properties
+    
+    var villain: Villain!
+    
+    // MARK: Outlets
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     
-    var villain: Villain!
+    // MARK: Life Cycle
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)

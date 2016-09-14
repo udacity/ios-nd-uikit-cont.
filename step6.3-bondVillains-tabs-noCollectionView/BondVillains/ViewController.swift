@@ -8,7 +8,11 @@
 
 import UIKit
 
+// MARK: - ViewController: UIViewController, UITableViewDataSource
+
 class ViewController: UIViewController, UITableViewDataSource {
+    
+    // MARK: Properties
     
     // Get ahold of some villains, for the table
     // This is an array of Villain instances
@@ -44,5 +48,4 @@ class ViewController: UIViewController, UITableViewDataSource {
         self.navigationController!.pushViewController(detailController, animated: true)
     
     }
-   
 }

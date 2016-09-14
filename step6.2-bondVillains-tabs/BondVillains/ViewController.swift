@@ -8,7 +8,11 @@
 
 import UIKit
 
+// MARK: - ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    // MARK: Properties
     
     // Get ahold of some villains, for the table
     // This is an array of Villain instances
@@ -37,12 +41,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {        
         let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("VillainDetailViewController") as! VillainDetailViewController
         detailController.villain = self.allVillains[indexPath.row]
         self.navigationController!.pushViewController(detailController, animated: true)
     
     }
-   
 }

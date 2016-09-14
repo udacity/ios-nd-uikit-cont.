@@ -7,23 +7,27 @@
 //
 
 import Foundation
-
 import UIKit
 
+// MARK: - VillainCollectionViewController: UICollectionViewController
+
 class VillainCollectionViewController: UICollectionViewController {
+
+    // MARK: Properties
     
     // Get ahold of some villains, for the table
     // This is an array of Villain instances.
     let allVillains = Villain.allVillains
     
+    // MARK: Life Cycle
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.hidden = false
     }
     
-    
     // MARK: Collection View Data Source
+    
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.allVillains.count
     }
@@ -35,19 +39,16 @@ class VillainCollectionViewController: UICollectionViewController {
         
         // Set the name and image
         cell.nameLabel.text = villain.name
-        cell.villainImageView?.image = UIImage(named: villain.imageName)
-        //cell.schemeLabel.text = "Scheme: \(villain.evilScheme)"
+        cell.villainImageView?.image = UIImage(named: villain.imageName)        
         
         return cell
     }
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
-    {
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath) {
         
         let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("VillainDetailViewController") as! VillainDetailViewController
         detailController.villain = self.allVillains[indexPath.row]
         self.navigationController!.pushViewController(detailController, animated: true)
         
     }
-    
 }

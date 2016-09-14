@@ -7,15 +7,17 @@
 //
 
 import Foundation
-
 import UIKit
 
+// MARK: - VillainCollectionViewController: UICollectionViewController
+
 class VillainCollectionViewController: UICollectionViewController {
+    
+    // MARK: Properties
     
     // Get ahold of some villains, for the table
     // This is an array of Villain instances
     let allVillains = Villain.allVillains
-    
     
     // MARK: Table View Data Source
     
@@ -34,20 +36,16 @@ class VillainCollectionViewController: UICollectionViewController {
         let villain = self.allVillains[indexPath.row]
         
         // Set the name and image
-        //cell.nameLabel.text = villain.name
         cell.villainImageView?.image = UIImage(named: villain.imageName)
-        //cell.schemeLabel.text = "Scheme: \(villain.evilScheme)"
         
         return cell
     }
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
-    {
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath) {
         
         let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("VillainDetailViewController") as! VillainDetailViewController
         detailController.villain = self.allVillains[indexPath.row]
         self.navigationController!.pushViewController(detailController, animated: true)
         
     }
-    
 }
