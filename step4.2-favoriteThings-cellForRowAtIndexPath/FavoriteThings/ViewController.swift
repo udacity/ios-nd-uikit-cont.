@@ -8,10 +8,11 @@
 
 import UIKit
 
+// MARK: - ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-
-    // Model
+    // MARK: Model
     
     let favoriteThings = [
         "Raindrops on roses",
@@ -20,22 +21,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         "Warm woolen mittens"
     ]
 
-    // Mark: Table View Data Source Methods
+    // MARK: Table View Data Source Methods
     
-    /**
-    * Number of Rows
-    */
-    
+    // number of rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
         return self.favoriteThings.count
     }
 
-    
-    /**
-    * Cell For Row At Index Path
-    */
-
+    // cell for row at index path
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
       // TODO: Implement method
@@ -48,4 +42,3 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return placeholderCell
     }
 }
-
