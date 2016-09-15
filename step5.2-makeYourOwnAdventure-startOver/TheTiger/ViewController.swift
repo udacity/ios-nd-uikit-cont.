@@ -8,20 +8,22 @@
 
 import UIKit
 
+// MARK: - ViewController: UIViewController
+
 class ViewController: UIViewController {
 
+    // MARK: Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Start Over", style: UIBarButtonItemStyle.plain, target: self, action: #selector(ViewController.startOver))
     }
     
+    // MARK: Start Over
+    
     func startOver() {
-        
         if let navigationController = self.navigationController {
             navigationController.popToRootViewController(animated: true)
         }
     }
-
 }
-
