@@ -8,13 +8,19 @@
 
 import Foundation
 
+// MARK: - RPSMatch
+
 // The RPSMatch struct represents a single match. You'll learn more about structs in Lesson 5's Swift session! 
 
 struct RPSMatch {
     
+    // MARK: Properties
+    
     let p1: RPS
     let p2: RPS
     let date: Date
+    
+    // MARK: Initializer
     
     /**
     * if initialized without a date, use the current date
@@ -24,6 +30,8 @@ struct RPSMatch {
         self.p2 = p2
         self.date = Date()
     }
+    
+    // MARK: Computed Properties
     
     var winner: RPS {
         get {

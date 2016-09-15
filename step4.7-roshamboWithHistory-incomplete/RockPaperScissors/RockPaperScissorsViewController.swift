@@ -8,16 +8,24 @@
 
 import UIKit
 
+// MARK: - RockPaperScissorsViewController: UIViewController
+
 class RockPaperScissorsViewController: UIViewController {
 
-    @IBOutlet weak var rockButton: UIButton!
-    @IBOutlet weak var paperButton: UIButton!
-    @IBOutlet weak var scissorsButton: UIButton!
+    // MARK: Properties
     
     var match: RPSMatch!
     
     // Here is the history array which will hold the results of each match that is played in a session.
     var history = [RPSMatch]()
+    
+    // MARK: Outlets
+    
+    @IBOutlet weak var rockButton: UIButton!
+    @IBOutlet weak var paperButton: UIButton!
+    @IBOutlet weak var scissorsButton: UIButton!
+    
+    // MARK: Actions
     
     @IBAction func makeYourMove(_ sender: UIButton) {
         
@@ -37,8 +45,13 @@ class RockPaperScissorsViewController: UIViewController {
         }
     }
     
-    func throwDown(_ playersMove: RPS)
-    {
+    @IBAction func showHistory(_ sender: AnyObject) {
+        //TODO: Present HistoryViewController
+    }
+    
+    // MARK: Play!
+    
+    func throwDown(_ playersMove: RPS) {
         // The RPS enum generates the opponent's move
         let computersMove = RPS()
         
@@ -70,16 +83,11 @@ class RockPaperScissorsViewController: UIViewController {
         // But don't forget to implement prepareForSegue.
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+    // MARK: Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //Notice that this code works for both Scissors and Paper
-        let controller = segue.destinationViewController as! ResultViewController
+        let controller = segue.destination as! ResultViewController
         controller.match = self.match
     }
-   
-    @IBAction func showHistory(_ sender: AnyObject) {
-      //TODO: Present HistoryViewController
-
-    }
-    
 }

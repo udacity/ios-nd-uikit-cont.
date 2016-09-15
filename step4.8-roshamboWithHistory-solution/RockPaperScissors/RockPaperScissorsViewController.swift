@@ -8,14 +8,22 @@
 
 import UIKit
 
-class RockPaperScissorsViewController: UIViewController {
+// MARK: - RockPaperScissorsViewController: UIViewController
 
+class RockPaperScissorsViewController: UIViewController {
+    
+    // MARK: Properties
+    
+    var history = [RPSMatch]()
+    
+    // MARK: Outlets
+    
     @IBOutlet weak var rockButton: UIButton!
     @IBOutlet weak var paperButton: UIButton!
     @IBOutlet weak var scissorsButton: UIButton!
     
-    var history = [RPSMatch]()
-
+    // MARK: Actions
+    
     @IBAction func makeYourMove(_ sender: UIButton) {
         
         switch (sender) {
@@ -33,8 +41,9 @@ class RockPaperScissorsViewController: UIViewController {
         }
     }
     
-    func throwDown(_ playersMove: RPS)
-    {
+    // MARK: Play!
+    
+    func throwDown(_ playersMove: RPS) {
         let computersMove = RPS()
         let match = RPSMatch(p1: playersMove, p2: computersMove)
         
@@ -50,6 +59,9 @@ class RockPaperScissorsViewController: UIViewController {
         
         self.present(resultVC, animated: true, completion: nil)
     }
+    
+    // MARK: Actions
+    
     @IBAction func showHistory(_ sender: AnyObject) {
         
         let storyboard = self.storyboard
