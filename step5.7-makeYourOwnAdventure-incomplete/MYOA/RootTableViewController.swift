@@ -8,18 +8,22 @@
 
 import UIKit
 
+// MARK: - RootTableViewController: UITableViewController
+
 class RootTableViewController: UITableViewController {
+
+    // MARK: Properties
     
     var adventures = [Adventure]()
     
-    // MARK: - UIViewController
+    // MARK: Life Cycle
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
 
         // Initialize the Adventures
-        let adventurePlistPaths = Bundle.main.pathsForResources(ofType: "plist", inDirectory: nil) 
+        let adventurePlistPaths = Bundle.main.paths(forResourcesOfType: "plist", inDirectory: nil)
         
         for plistPath in adventurePlistPaths {
             
@@ -36,7 +40,7 @@ class RootTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
 
-    // MARK: - UITableViewController
+    // MARK: UITableViewController
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return adventures.count
@@ -71,6 +75,4 @@ class RootTableViewController: UITableViewController {
         // Push the new controller onto the stack
         self.navigationController!.pushViewController(storyNodeController, animated: true)
     }
-    
 }
-

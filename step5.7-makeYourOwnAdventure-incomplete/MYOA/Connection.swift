@@ -9,10 +9,16 @@
 
 import Foundation
 
+// MARK: - Connection
+
 struct Connection {
+
+    // MARK: Properties
     
     var prompt: String
     var connectedStoryNodeName: String
+    
+    // MARK: Initializer
     
     init(dictionary: [String : String]) {
         prompt = dictionary["prompt"]!

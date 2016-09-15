@@ -7,12 +7,17 @@
 
 import Foundation
 
+// MARK: - Adventure
+
 class Adventure {
+    
+    // MARK: Properties
     
     var credits: Credits;
     var startNode: StoryNode!
-    
     var storyNodes: [String : StoryNode]
+    
+    // MARK: Initializer
     
     init(dictionary: [String : AnyObject]) {
         
@@ -29,8 +34,7 @@ class Adventure {
         // Add a Story Node for each item in storyNodesDictionary
         for (key, dictionary) in storyNodesDictionary {
             storyNodes[key] = StoryNode(dictionary: dictionary as! [String : AnyObject], adventure: self)
-        }
-        
+        }        
         
         // Set the first node
         let startNodeKey = dictionary["startNodeKey"]as! String

@@ -8,15 +8,23 @@
 
 import UIKit
 
+// MARK: - StoryNodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+
 class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // MARK: Properties
+    
     var storyNode: StoryNode!
+    
+    // MARK: Outlets
     
     @IBOutlet weak var adventureImageView: UIImageView!
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var restartButton: UIButton!
-        
+    
+    // MARK: Life Cycle
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -33,38 +41,35 @@ class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableVie
         restartButton.isHidden = storyNode.promptCount() > 0
     }
     
-        // MARK: - Table - Place Holder Implementation
+    // MARK: Table Placeholder Implementation
     
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            
-            //Push the next story node.
-            let nextStoryNode = storyNode.storyNodeForIndex(index: (indexPath as NSIndexPath).row)
-            let controller = self.storyboard!.instantiateViewController(withIdentifier: "StoryNodeViewController") as! StoryNodeViewController
-            controller.storyNode = nextStoryNode
-            self.navigationController!.pushViewController(controller, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //Push the next story node.
+        let nextStoryNode = storyNode.storyNodeForIndex(index: (indexPath as NSIndexPath).row)
+        let controller = self.storyboard!.instantiateViewController(withIdentifier: "StoryNodeViewController") as! StoryNodeViewController
+        controller.storyNode = nextStoryNode
+        self.navigationController!.pushViewController(controller, animated: true)
     }
     
-    
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            
-            // Return the number of prompts in the storyNode (The 2 is just a place holder)
-            return storyNode.promptCount()
-        }
-    
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
-            //Dequeue a cell and populate it with text from the correct prompt.
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-            cell.textLabel!.text = storyNode.promptForIndex((indexPath as NSIndexPath).row)
-            return cell
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        // Return the number of prompts in the storyNode (The 2 is just a place holder)
+        return storyNode.promptCount()
+    }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        //Dequeue a cell and populate it with text from the correct prompt.
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+        cell.textLabel!.text = storyNode.promptForIndex((indexPath as NSIndexPath).row)
+        return cell
+    }
     
-    // MARK: - Actions
+    // MARK: Actions
     
     @IBAction func restartStory() {
         let controller = self.navigationController!.viewControllers[1] 
         let _ = self.navigationController?.popToViewController(controller, animated: true)
     }
-    
 }
