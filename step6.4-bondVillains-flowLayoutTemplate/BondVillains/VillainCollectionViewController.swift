@@ -7,20 +7,24 @@
 //
 
 import Foundation
-
 import UIKit
 
+// MARK: - VillainCollectionViewController: UICollectionViewController
+
 class VillainCollectionViewController: UICollectionViewController {
- 
-    //TODO: Add outlet to flowLayout here.
+    
+    // MARK: Properties
+    
+    // TODO: Add outlet to flowLayout here.
     
     // Get ahold of some villains, for the table
     // This is an array of Villain instances
     let allVillains = Villain.allVillains
     
+    // MARK: Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //TODO: Implement flowLayout here.
     }
 
@@ -30,6 +34,7 @@ class VillainCollectionViewController: UICollectionViewController {
     }
     
     // MARK: Collection View Data Source
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.allVillains.count
     }
@@ -47,13 +52,11 @@ class VillainCollectionViewController: UICollectionViewController {
         return cell
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath)
-    {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath) {
         
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "VillainDetailViewController") as! VillainDetailViewController
         detailController.villain = self.allVillains[(indexPath as NSIndexPath).row]
         self.navigationController!.pushViewController(detailController, animated: true)
         
     }
-    
 }
