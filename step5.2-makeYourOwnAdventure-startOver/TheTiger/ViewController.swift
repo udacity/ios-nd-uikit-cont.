@@ -16,12 +16,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Start Over", style: UIBarButtonItemStyle.plain, target: self, action: #selector(ViewController.startOver))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Start Over", style: .plain, target: self, action: #selector(ViewController.startOver))
     }
     
     // MARK: Start Over
     
-    func startOver() {
+    @objc func startOver() {
         if let navigationController = self.navigationController {
             navigationController.popToRootViewController(animated: true)
         }
